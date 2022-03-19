@@ -1,0 +1,13 @@
+$(urlfetch
+	$(eval
+		var t=parseInt('$(time UTC "x")');
+		var nd=t+(parseInt('$(query)')+1)*60000;
+		var url="https://twitch.center/customapi/addquote?token=e0e38a336c4e1910&data="+nd+"&silent=1";
+		url
+	)
+)
+$(eval
+	var q=parseInt('$(urlfetch https://twitch.center/customapi/quote?token=3efbf37c&data=-1&no_id=1)');
+	let m=((isNaN(q))||q==0)?"Enter a value in minutes @$(user)":"Gamba has started at $(time Europe/Amsterdam "HH:mm:ss") CET and will last $(query) minutes.";
+	m
+)
