@@ -1,0 +1,2 @@
+$(urlfetch https://twitch.center/customapi/delquote?token=[PRIV_TOKEN]&clear=1&silent=1) 
+The gamba has ended! Congratulations to the winners.
