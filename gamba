@@ -1,0 +1,12 @@
+$(eval
+	var t=parseInt('$(urlfetch https://twitch.center/customapi/quote?token=[PUBLIC TOKEN]&data=-1&no_id=1)');
+	if(isNaN(t)){
+		m="There is no gamba running"
+	}
+	else {
+		var tcet=t+4*(3600000);
+		var td=new Date(tcet);
+		var m="The current gamba will end at " + td.toLocaleString() + " CET";
+	}
+	m
+)
