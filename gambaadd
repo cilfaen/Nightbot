@@ -1,0 +1,13 @@
+$(urlfetch
+	$(eval
+		var t=parseInt('$(urlfetch https://twitch.center/customapi/quote?token=[PUB_TOKEN]&data=-1&no_id=1)');
+		var n=t+'$(query)'*60000;
+		var u="https://twitch.center/customapi/addquote?token=[PRIV_TOKEN]&data="+n+"&silent=1";
+		u
+	)
+)
+$(eval
+	var q=parseInt('$(urlfetch https://twitch.center/customapi/quote?token=[PUB_TOKEN]&data=-1&no_id=1)');
+	let m=(isNaN(q))?"There's no gamba or you didn't give a number":"Extended gamba by $(query) minutes";
+	m
+)
