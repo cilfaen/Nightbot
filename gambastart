@@ -1,7 +1,7 @@
 $(urlfetch
 	$(eval
 		var t=parseInt('$(time UTC "x")');
-		var nd=t+(parseInt('$(query)')+60)*60000;
+		var nd=t+(parseInt('$(query)')+120)*60000;
 		var url="https://twitch.center/customapi/addquote?token=[PRIV_TOKEN]&data="+nd+"&silent=1";
 		url
 	)
